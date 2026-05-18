@@ -391,6 +391,286 @@ main {
     box-shadow: none;
 }
 
+/* Challenge Panel */
+.challenge-panel {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border-radius: var(--border-radius-md);
+    padding: 12px 16px;
+    margin-bottom: 16px;
+    border: 1px solid #fbbf24;
+    box-shadow: 0 2px 8px rgba(251, 191, 36, 0.15);
+}
+
+.challenge-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.challenge-title {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #92400e;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.challenge-status {
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 999px;
+    background-color: rgba(255, 255, 255, 0.6);
+    color: #92400e;
+}
+
+.challenge-status.completed {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.challenge-status.failed {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+.challenge-desc {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #78350f;
+    line-height: 1.4;
+    margin-bottom: 6px;
+}
+
+.challenge-progress {
+    font-size: 0.75rem;
+    color: #92400e;
+    font-weight: 500;
+    margin-bottom: 8px;
+    min-height: 14px;
+}
+
+.challenge-progress.fail-reason {
+    color: var(--danger-color);
+    font-weight: 600;
+}
+
+.challenge-footer {
+    display: flex;
+    gap: 8px;
+}
+
+.challenge-switch-btn,
+.challenge-records-btn {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid #fbbf24;
+    color: #92400e;
+    padding: 6px 10px;
+    border-radius: var(--border-radius-sm);
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.challenge-switch-btn:hover,
+.challenge-records-btn:hover {
+    background-color: white;
+}
+
+.challenge-panel.completed {
+    background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+    border-color: var(--success-color);
+}
+
+.challenge-panel.failed {
+    background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+    border-color: var(--danger-color);
+}
+
+/* Result Modal */
+.result-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+}
+
+.result-modal.show {
+    display: flex;
+}
+
+.result-modal-content {
+    background: white;
+    border-radius: var(--border-radius-lg);
+    padding: 32px 24px;
+    max-width: 320px;
+    width: 88%;
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+    animation: modalIn 0.3s ease-out;
+}
+
+.result-modal-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 16px;
+    color: var(--text-main);
+}
+
+.result-modal-challenge {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+    line-height: 1.5;
+}
+
+.result-modal-challenge .challenge-result-success {
+    color: var(--success-color);
+    font-weight: 700;
+}
+
+.result-modal-challenge .challenge-result-fail {
+    color: var(--danger-color);
+    font-weight: 700;
+}
+
+.result-modal-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 32px;
+    border-radius: var(--border-radius-sm);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.result-modal-btn:hover {
+    background-color: var(--primary-hover);
+}
+
+/* Records Modal */
+.records-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+}
+
+.records-modal.show {
+    display: flex;
+}
+
+.records-modal-content {
+    background: white;
+    border-radius: var(--border-radius-lg);
+    padding: 20px;
+    max-width: 340px;
+    width: 90%;
+    max-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-lg);
+    animation: modalIn 0.3s ease-out;
+}
+
+.records-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.records-modal-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+    width: 28px;
+    height: 28px;
+}
+
+.records-list {
+    list-style: none;
+    overflow-y: auto;
+    flex: 1;
+    min-height: 100px;
+}
+
+.records-list li {
+    padding: 10px 12px;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 0.8rem;
+    line-height: 1.4;
+}
+
+.records-list li:last-child {
+    border-bottom: none;
+}
+
+.records-list .record-task {
+    font-weight: 600;
+    color: var(--text-main);
+    margin-bottom: 2px;
+}
+
+.records-list .record-meta {
+    color: var(--text-muted);
+    font-size: 0.7rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.records-list .record-status-success {
+    color: var(--success-color);
+    font-weight: 600;
+}
+
+.records-list .record-status-fail {
+    color: var(--danger-color);
+    font-weight: 600;
+}
+
+.records-list .empty-records {
+    text-align: center;
+    color: var(--text-muted);
+    padding: 24px 0;
+    font-size: 0.875rem;
+}
+
+@keyframes modalIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 /* Animations */
 @keyframes slideIn {
     from { 
