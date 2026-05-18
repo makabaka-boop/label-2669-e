@@ -159,6 +159,133 @@ main {
     position: relative;
 }
 
+.challenge-section {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border: 1px solid #f59e0b;
+    border-radius: var(--border-radius-md);
+    padding: 12px 16px;
+    margin-bottom: 16px;
+}
+
+.challenge-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.challenge-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #92400e;
+}
+
+.btn-challenge-switch {
+    background: white;
+    border: 1px solid #f59e0b;
+    color: #b45309;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-challenge-switch:hover {
+    background: #fffbeb;
+    transform: translateY(-1px);
+}
+
+.challenge-body {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.challenge-desc {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #78350f;
+    line-height: 1.4;
+}
+
+.challenge-status {
+    font-size: 0.8rem;
+    font-weight: 600;
+    min-height: 1.2em;
+}
+
+.challenge-status.completed {
+    color: var(--success-color);
+}
+
+.challenge-status.failed {
+    color: var(--danger-color);
+}
+
+.challenge-status.pending {
+    color: #92400e;
+}
+
+.challenge-history-toggle {
+    margin-top: 8px;
+    text-align: right;
+}
+
+.btn-challenge-history {
+    background: none;
+    border: none;
+    color: #92400e;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 0;
+}
+
+.btn-challenge-history:hover {
+    color: #78350f;
+}
+
+.challenge-history-panel {
+    margin-top: 8px;
+    max-height: 120px;
+    overflow-y: auto;
+    border-top: 1px solid #fbbf24;
+    padding-top: 8px;
+}
+
+.challenge-history-panel ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.challenge-history-panel li {
+    font-size: 0.75rem;
+    padding: 4px 0;
+    border-bottom: 1px solid rgba(251, 191, 36, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #78350f;
+}
+
+.challenge-history-panel li .ch-result {
+    font-weight: 700;
+}
+
+.challenge-history-panel li .ch-result.win {
+    color: var(--success-color);
+}
+
+.challenge-history-panel li .ch-result.lose {
+    color: var(--danger-color);
+}
+
 /* Game Status */
 .game-status {
     display: flex;

@@ -24,6 +24,23 @@
         </header>
 
         <main>
+            <div class="challenge-section" id="challenge-section">
+                <div class="challenge-header">
+                    <span class="challenge-label">挑战任务</span>
+                    <button id="challenge-switch-btn" class="btn-challenge-switch">换一个</button>
+                </div>
+                <div class="challenge-body" id="challenge-body">
+                    <div class="challenge-desc" id="challenge-desc">—</div>
+                    <div class="challenge-status" id="challenge-status"></div>
+                </div>
+                <div class="challenge-history-toggle">
+                    <button id="challenge-history-btn" class="btn-challenge-history">挑战记录 (0)</button>
+                </div>
+                <div class="challenge-history-panel" id="challenge-history-panel" style="display:none;">
+                    <ul id="challenge-history-list"></ul>
+                </div>
+            </div>
+
             <div class="game-status">
                 <div class="remaining-guesses" id="remaining-info">剩余次数: <span>∞</span></div>
                 <div class="message-area" id="message-area">准备开始...</div>
