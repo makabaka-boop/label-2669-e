@@ -149,6 +149,125 @@ select:focus {
     transform: translateY(0);
 }
 
+/* Challenge Card */
+.challenge-card {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border: 2px solid #f59e0b;
+    border-radius: var(--border-radius-md);
+    padding: 12px 16px;
+    margin-bottom: 16px;
+    box-shadow: var(--shadow-sm);
+}
+
+.challenge-card.completed {
+    background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+    border-color: var(--success-color);
+}
+
+.challenge-card.failed {
+    background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+    border-color: var(--danger-color);
+}
+
+.challenge-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.challenge-title {
+    font-weight: 700;
+    font-size: 0.75rem;
+    color: #92400e;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.challenge-card.completed .challenge-title {
+    color: #065f46;
+}
+
+.challenge-card.failed .challenge-title {
+    color: #991b1b;
+}
+
+.challenge-change-btn {
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid #d97706;
+    color: #92400e;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.challenge-change-btn:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-1px);
+}
+
+.challenge-change-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.challenge-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.challenge-description {
+    flex: 1;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #78350f;
+    line-height: 1.4;
+}
+
+.challenge-card.completed .challenge-description {
+    color: #065f46;
+}
+
+.challenge-card.failed .challenge-description {
+    color: #991b1b;
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+.status-badge {
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 999px;
+    background: rgba(217, 119, 6, 0.2);
+    color: #92400e;
+    white-space: nowrap;
+}
+
+.challenge-card.completed .status-badge {
+    background: rgba(16, 185, 129, 0.2);
+    color: #065f46;
+}
+
+.challenge-card.failed .status-badge {
+    background: rgba(239, 68, 68, 0.2);
+    color: #991b1b;
+}
+
+.challenge-failure {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px dashed #fca5a5;
+    font-size: 0.75rem;
+    color: #991b1b;
+    font-weight: 500;
+}
+
 /* Main Content */
 main {
     flex: 1;

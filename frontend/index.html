@@ -24,6 +24,20 @@
         </header>
 
         <main>
+            <div class="challenge-card" id="challenge-card">
+                <div class="challenge-header">
+                    <span class="challenge-title">🎯 挑战任务</span>
+                    <button id="change-challenge-btn" class="challenge-change-btn" title="切换任务">换一个</button>
+                </div>
+                <div class="challenge-content">
+                    <div class="challenge-description" id="challenge-description">加载中...</div>
+                    <div class="challenge-status" id="challenge-status">
+                        <span class="status-badge" id="status-badge">进行中</span>
+                    </div>
+                </div>
+                <div class="challenge-failure" id="challenge-failure" style="display: none;"></div>
+            </div>
+
             <div class="game-status">
                 <div class="remaining-guesses" id="remaining-info">剩余次数: <span>∞</span></div>
                 <div class="message-area" id="message-area">准备开始...</div>
