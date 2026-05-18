@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>猜数字游戏 (Bulls and Cows)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>猜数字</h1>
+            <div class="difficulty-control">
+                <div class="select-wrapper">
+                    <select id="difficulty">
+                        <option value="beginner">入门 (无限次)</option>
+                        <option value="easy">简单 (15次)</option>
+                        <option value="medium">中等 (10次)</option>
+                        <option value="expert">专家 (6次)</option>
+                    </select>
+                </div>
+                <button id="new-game-btn" class="btn-primary">新游戏</button>
+            </div>
+        </header>
+
+        <main>
+            <div class="game-status">
+                <div class="remaining-guesses" id="remaining-info">剩余次数: <span>∞</span></div>
+                <div class="message-area" id="message-area">准备开始...</div>
+            </div>
+
+            <div class="input-display" id="input-display">
+                <span class="digit-box"></span>
+                <span class="digit-box"></span>
+                <span class="digit-box"></span>
+            </div>
+
+            <div class="history-container">
+                <div class="history-header">
+                    <span>猜测</span>
+                    <span>结果</span>
+                </div>
+                <ul id="history-list" class="history-list">
+                    <!-- History items will go here -->
+                </ul>
+            </div>
+
+            <div class="controls-area">
+                <div class="hint-section">
+                    <button id="hint-btn" class="btn-secondary">提示 (智能分析)</button>
+                </div>
+                
+                <div class="keypad">
+                    <div class="key-row">
+                        <button class="key-btn" data-key="1">1</button>
+                        <button class="key-btn" data-key="2">2</button>
+                        <button class="key-btn" data-key="3">3</button>
+                    </div>
+                    <div class="key-row">
+                        <button class="key-btn" data-key="4">4</button>
+                        <button class="key-btn" data-key="5">5</button>
+                        <button class="key-btn" data-key="6">6</button>
+                    </div>
+                    <div class="key-row">
+                        <button class="key-btn" data-key="7">7</button>
+                        <button class="key-btn" data-key="8">8</button>
+                        <button class="key-btn" data-key="9">9</button>
+                    </div>
+                    <div class="key-row">
+                        <button class="key-btn action-btn" id="undo-btn">撤销</button>
+                        <button class="key-btn" data-key="0">0</button>
+                        <button class="key-btn action-btn confirm-btn" id="submit-btn">提交</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
